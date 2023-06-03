@@ -1,0 +1,136 @@
+package model;
+
+import utils.Utils;
+
+public class Produto {
+    private static int count = 1;
+    
+    private int id;
+    private String agricultor;
+    private String sonmagri;
+    private String telefone; 
+    private String estado;
+    private String cidade;
+    private String zona;
+    private String rua;
+    private String nome;
+    private Double preco;
+    private String agenda;
+
+    public Produto(String agricultor, String sonmagri, String telefone, String estado, String cidade, String zona, String rua, Double preco, String nome, String agenda) {
+        this.id = count;
+        this.agricultor = agricultor;
+        this.sonmagri = sonmagri;
+        this.telefone = telefone;
+        this.estado = estado;
+        this.cidade = cidade;
+        this.zona = zona;
+        this.rua = rua;
+        this.nome = nome;
+        this.preco = preco;
+        this.agenda = agenda;
+        Produto.count += 1;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getAgenda() {
+        return agenda;
+    }
+
+    public void setAgenda(String agenda) {
+        this.agenda = agenda;
+    }
+    
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+    
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getZona() {
+        return zona;
+    }
+
+    public void setZona(String zona) {
+        this.zona = zona;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+    
+
+    public String getSonmagri() {
+        return sonmagri;
+    }
+
+    public void setSonmagri(String sonmagri) {
+        this.sonmagri = sonmagri;
+    }
+    
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public String getAgricultor() {
+        return agricultor;
+    }
+
+    public void setAgricultor(String agricultor) {
+        this.agricultor = agricultor;
+    }
+    
+    public String toString(){
+        return "Id: " + this.getId() +
+               "\nNome: " + this.getAgricultor()+ " " + this.getSonmagri() +
+                "\nTelefone: " + this.getTelefone() + "\nEstado:"
+                + this.getEstado() + "\nCidade: " 
+                + this.getCidade() + "\nZona: " 
+                + this.getZona() + "\nRua: "
+                + this.getRua() +
+                "\nProduto: " + this.nome + 
+                "\nPreco: " + Utils.doubleToString(this.getPreco()) +
+                "\nAgenda: " + this.getAgenda();
+    }
+    
+}
